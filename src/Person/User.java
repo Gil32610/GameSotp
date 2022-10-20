@@ -4,6 +4,7 @@ public class User  extends Person{
     private String email;
     private String username;
     private Integer age;
+    
 
     public User(String cpf, String fullname, String nationality, String email, String username, Integer age){
         super(cpf, fullname, nationality);
@@ -12,6 +13,7 @@ public class User  extends Person{
         this.age = age;
     }
 
-    
+
+
     
 }
