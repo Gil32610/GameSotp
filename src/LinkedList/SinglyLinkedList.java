@@ -51,42 +51,7 @@ public class SinglyLinkedList<T> {
         return size;
     }
 
-    public boolean isOrdered(boolean ascending) {
-        if (isEmpty()) {
-            return true;
-        } else {
-            SinglyListNode node = this.head;
-            if (ascending) {
-                while (node.getNext() != null) {
-                    Integer value = node.getValue();
-
-                    if (value > node.getNext().getValue()) {
-                        return false;
-                    }
-
-                    node = node.getNext();
-
-                }
-
-                return true;
-
-            } else {
-                while (node.getNext() != null) {
-                    Integer value = node.getValue();
-                    if (value < node.getNext().getValue()) {
-                        return false;
-                    }
-                    node = node.getNext();
-
-                }
-
-                return true;
-
-            }
-        }
-    }
-
-    public void addLast(Integer value) {
+    public void addLast(T value) {
         SinglyListNode node = new SinglyListNode(value, null);
         if (this.isEmpty()) {
             this.head = node;
