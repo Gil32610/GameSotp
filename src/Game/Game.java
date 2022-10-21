@@ -5,8 +5,10 @@ public class Game {
     private Integer rating;
     private String genre;
     private Integer releaseDate;
+    private double price;
 
-    public Game(String title, Integer rating, String genre, Integer releaseDate) {
+    public Game(String title, Integer rating, String genre, Integer releaseDate, double price) {
+        this.price = price;
         this.title = title;
         this.rating = rating;
         this.genre = genre;
