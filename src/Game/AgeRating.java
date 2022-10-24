@@ -13,4 +13,25 @@ public enum AgeRating {
     private AgeRating(String description) {
         this.description = description;
     }
+
+    public AgeRating aRating(int i) {
+        switch (i) {
+            case 1:
+                return L;
+            case 2:
+                return M10;
+            case 3:
+                return M12;
+
+            case 4:
+                return M14;
+            case 5:
+                return M16;
+            case 6:
+                return M18;
+            default:
+                return null;
+
+        }
+    }
 }

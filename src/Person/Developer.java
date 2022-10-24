@@ -18,10 +18,13 @@ public class Developer extends Person  {
     }
 
     public void sendGamePublisher(Publisher p){
-
+        String title,genre; 
+        AgeRating rating;
+        Integer releaseDate;
+        double price;
         Scanner s = new Scanner(System.in);
-
-        String title = s.nextLine();
+        
+        
         AgeRating rating = new AgeRating();
 
 
