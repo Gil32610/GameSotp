@@ -11,6 +11,11 @@ public abstract class Person {
         this.nationality = nationality;
     }
 
+    public Person(String fullname, String nationality){
+        this.fullname = fullname;
+        this.nationality = nationality;
+    }
+
     public String getCpf() {
         return cpf;
     }
