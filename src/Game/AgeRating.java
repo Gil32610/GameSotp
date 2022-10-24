@@ -13,4 +13,10 @@ public enum AgeRating {
     private AgeRating(String description) {
         this.description = description;
     }
+
+    public String getDescription() {
+        return this.description;
+    }
+
 }
+

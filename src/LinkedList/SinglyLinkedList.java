@@ -1,7 +1,7 @@
 package LinkedList;
 
 public class SinglyLinkedList<T> {
-    private SinglyListNode head;
+    private SinglyListNode<T> head;
 
     public boolean isEmpty() {
         if (this.head == null) {
@@ -12,7 +12,7 @@ public class SinglyLinkedList<T> {
     }
 
     public void addFirst(T value) {
-        SinglyListNode node = new SinglyListNode(value, null);
+        SinglyListNode<T> node = new SinglyListNode<>(value, null);
         if (isEmpty()) {
             this.head = node;
         } else {
@@ -23,8 +23,8 @@ public class SinglyLinkedList<T> {
 
     }
 
-    public SinglyListNode search(T value) {
-        SinglyListNode search;
+    public SinglyListNode<T> search(T value) {
+        SinglyListNode<T> search;
         if (isEmpty()) {
             return null;
         } else {
@@ -42,7 +42,7 @@ public class SinglyLinkedList<T> {
     }
 
     public int size() {
-        SinglyListNode current = this.head;
+        SinglyListNode<T> current = this.head;
         int size = 0;
         while (current != null) {
             current = current.getNext();
@@ -52,11 +52,11 @@ public class SinglyLinkedList<T> {
     }
 
     public void addLast(T value) {
-        SinglyListNode node = new SinglyListNode(value, null);
+        SinglyListNode<T> node = new SinglyListNode<>(value, null);
         if (this.isEmpty()) {
             this.head = node;
         } else {
-            SinglyListNode pointer = this.head;
+            SinglyListNode<T> pointer = this.head;
             while (pointer.getNext() != null) {
                 pointer = pointer.getNext();
             }
@@ -68,8 +68,8 @@ public class SinglyLinkedList<T> {
         if (isEmpty() || this.size() == 1) {
             return;
         }
-        SinglyListNode previousNode = this.head;
-        SinglyListNode curreNode = previousNode.getNext();
+        SinglyListNode<T> previousNode = this.head;
+        SinglyListNode<T> curreNode = previousNode.getNext();
         this.head.setNext(null);
         while (curreNode != null) {
             this.head = curreNode.getNext();
@@ -82,14 +82,14 @@ public class SinglyLinkedList<T> {
 
     }
 
-    public void delete(SinglyListNode nodeDel) {
+    public void delete(SinglyListNode<T> nodeDel) {
         if (this.isEmpty()) {
             return;
         }
         if (nodeDel == this.head) {
             this.head = nodeDel.getNext();
         }
-        SinglyListNode previousNode = this.head;
+        SinglyListNode<T> previousNode = this.head;
         while (previousNode != null) {
             if (previousNode.getNext() == nodeDel) {
                 previousNode.setNext(nodeDel.getNext());
@@ -99,7 +99,7 @@ public class SinglyLinkedList<T> {
         }
     }
 
-    public SinglyListNode getHead() {
+    public SinglyListNode<T> getHead() {
         return this.head;
     }
 }

@@ -2,28 +2,28 @@ package Studio;
 
 import LinkedList.*;
 import Game.*;
-import Person.*;
 
 public class Publisher {
 
     private SinglyLinkedList<Game> releasedGames;
-    private Developer aDeveloper;
+    
+
+    public Publisher() {
+        this.releasedGames = new SinglyLinkedList<>();
+    }
 
     public SinglyLinkedList<Game> getReleasedGames() {
 
         return releasedGames;
     }
+
     public void setReleasedGames(SinglyLinkedList<Game> releasedGames) {
 
         this.releasedGames = releasedGames;
     }
-    public Developer getaDeveloper() {
 
-        return aDeveloper;
+    public void publishGame(Game g) {
+        this.releasedGames.addLast(g);
     }
-    public void setaDeveloper(Developer aDeveloper) {
-        
-        this.aDeveloper = aDeveloper;
-    }
+
 }
-
