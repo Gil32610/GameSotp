@@ -25,7 +25,7 @@ public class Developer extends Person  {
         Scanner s = new Scanner(System.in);
         
         
-        AgeRating rating = new AgeRating();
+        
 
 
     }
