@@ -25,10 +25,5 @@ public class Developer extends Person  {
         AgeRating rating = new AgeRating();
 
 
-
-
-        Game game = new Game(title, AgeRating rating, String genre, Integer releaseDate, double price);
-        p.addLast(game);
-
     }
 }
