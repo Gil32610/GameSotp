@@ -2,12 +2,12 @@ package Game;
 
 public class Game {
     private String title;
-    private Integer rating;
+    private AgeRating rating;
     private String genre;
     private Integer releaseDate;
     private double price;
 
-    public Game(String title, Integer rating, String genre, Integer releaseDate, double price) {
+    public Game(String title, AgeRating rating, String genre, Integer releaseDate, double price) {
         this.price = price;
         this.title = title;
         this.rating = rating;
@@ -23,11 +23,11 @@ public class Game {
         this.title = title;
     }
 
-    public Integer getRating() {
+    public AgeRating getRating() {
         return this.rating;
     }
 
-    public void setRating(Integer rating) {
+    public void setRating(AgeRating rating) {
         this.rating = rating;
     }
 
@@ -45,6 +45,14 @@ public class Game {
 
     public void setReleaseDate(Integer releaseDate) {
         this.releaseDate = releaseDate;
+    }
+    
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     @Override
