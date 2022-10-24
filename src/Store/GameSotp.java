@@ -19,6 +19,7 @@ public class GameSotp {
             op = Integer.parseInt(s.nextLine());
             switch(op){
                 case 1:
+                System.out.println("Informe o nome completo");
                 break;
                 case 2:
                 break;
@@ -69,6 +70,6 @@ public class GameSotp {
 
         }
     }
-    }
+    
 
 }
