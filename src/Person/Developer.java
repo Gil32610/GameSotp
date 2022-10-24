@@ -20,7 +20,15 @@ public class Developer extends Person  {
     public void sendGamePublisher(Publisher p){
 
         Scanner s = new Scanner(System.in);
-        
+
+        String title = s.nextLine();
+        AgeRating rating = new AgeRating();
+
+
+
+
+        Game game = new Game(title, AgeRating rating, String genre, Integer releaseDate, double price);
+        p.addLast(game);
 
     }
 }
