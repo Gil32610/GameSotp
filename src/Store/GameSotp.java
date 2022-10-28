@@ -8,10 +8,12 @@ import Game.AgeRating;
 
 public class GameSotp {
     public static void main(String[] args) {
-
-        AgeRating idade;
-        System.out.println(idade.getDescription());
         Scanner s = new Scanner(System.in);
+        String fullname, email, nationality, cpf, username;
+        Integer age; 
+        Game g;
+        User user;
+        AgeRating aRating;
         int op, i;
 
         do {
