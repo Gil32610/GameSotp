@@ -60,7 +60,6 @@ public class GameSotp {
                 return AgeRating.M10;
             case 3:
                 return AgeRating.M12;
-
             case 4:
                 return AgeRating.M14;
             case 5:

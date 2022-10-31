@@ -7,7 +7,6 @@ public class Publisher {
 
     private SinglyLinkedList<Game> releasedGames;
     
-
     public Publisher() {
         this.releasedGames = new SinglyLinkedList<>();
     }
