@@ -6,7 +6,6 @@ import Game.*;
 public class Publisher {
 
     private SinglyLinkedList<Game> releasedGames;
-    
 
     public Publisher() {
         this.releasedGames = new SinglyLinkedList<>();
@@ -21,8 +20,13 @@ public class Publisher {
 
         this.releasedGames = releasedGames;
     }
-    public void showGames(){
-        this.releasedGames.
+
+    public void showGames() {
+        this.releasedGames.showGames();
+    }
+
+    public void addGame(Game g) {
+        this.releasedGames.addLast(g);
     }
 
     public void publishGame(Game g) {
