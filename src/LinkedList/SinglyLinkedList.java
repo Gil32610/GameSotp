@@ -102,4 +102,15 @@ public class SinglyLinkedList<T> {
     public SinglyListNode<T> getHead() {
         return this.head;
     }
+
+    public void showGames() {
+        if (this.isEmpty()) {
+            System.out.println("No game released yet!");
+        } else {
+            SinglyListNode<T> current = this.head;
+            while (current != null) {
+                System.out.println(current.getValue());
+            }
+        }
+    }
 }

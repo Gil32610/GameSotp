@@ -21,6 +21,9 @@ public class Publisher {
 
         this.releasedGames = releasedGames;
     }
+    public void showGames(){
+        this.releasedGames.
+    }
 
     public void publishGame(Game g) {
         this.releasedGames.addLast(g);
