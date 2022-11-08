@@ -6,6 +6,7 @@ public class Game {
     private String genre;
     private Integer releaseDate;
     private double price;
+    private int sold;
 
     public Game(String title, AgeRating rating, String genre, Integer releaseDate, double price) {
         this.price = price;
@@ -13,6 +14,7 @@ public class Game {
         this.rating = rating;
         this.genre = genre;
         this.releaseDate = releaseDate;
+        this.sold = 0;
     }
 
     public String getTitle() {
@@ -46,13 +48,23 @@ public class Game {
     public void setReleaseDate(Integer releaseDate) {
         this.releaseDate = releaseDate;
     }
-    
+
     public double getPrice() {
         return price;
     }
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public void sale() {
+        this.sold++;
+    }
+
+    @Override
+    public String toString() {
+        return "Game [title=" + title + ", rating=" + rating + ", genre=" + genre + ", releaseDate=" + releaseDate
+                + ", price=" + price + "]";
     }
 
     @Override
