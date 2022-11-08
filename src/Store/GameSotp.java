@@ -16,30 +16,24 @@ public class GameSotp {
         AgeRating aRating;
         int op, i;
 
-        do {
-            options();
-            op = Integer.parseInt(s.nextLine());
-            switch (op) {
-                case 1:
-                    System.out.println("Informe o nome completo");
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-            }
-
-        } while (op != 0);
+        System.out.println("Informe o nome completo: ");
+        fullname = s.nextLine();
+        System.out.println("Informe a nacionalidade: ");
+        nationality = s.nextLine();
+        System.out.println("Informe o CPF: ");
+        cpf = s.nextLine();
+        System.out.println("Informe o email:");
+        email = s.nextLine();
+        System.out.println("Informe o nome de usuário: ");
+        username = s.nextLine();
+        System.out.println("Informe a idade: ");
+        age = Integer.parseInt(s.nextLine());
+        while (age < 0) {
+            System.out.println("Idade inválida! Digite novamente:");
+            age = Integer.parseInt(s.nextLine());
+        }
+        user = new User(cpf, fullname, nationality, email, username, age);
 
     }
 
-    public static void options() {
-        System.out.println("1- criar nova conta\n" + "2- ver catálogo\n" + " ");
-    }
 }
